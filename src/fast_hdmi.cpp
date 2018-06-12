@@ -96,6 +96,7 @@ static void hdmi_show(Mat& outputimage)
 	}
 }
 
+<<<<<<< HEAD
 static void detectAndDraw( Mat& img, CascadeClassifier& cascade )
 {
     vector<Rect> faces;
@@ -147,6 +148,8 @@ const char* keys =
     "{cascade|../../data/haarcascades/haarcascade_frontalface_alt.xml|}"
     "{@filename||}"
 };
+=======
+>>>>>>> 14a10895896e5566e4796ece4b5c7708fe6cbe56
 
 int main( int argc, const char** argv )
 {
@@ -155,6 +158,7 @@ int main( int argc, const char** argv )
     string inputName;
     CascadeClassifier cascade;
     
+<<<<<<< HEAD
     CommandLineParser parser(argc, argv, keys);
     cascadeName = parser.get<string>("cascade");
     inputName = parser.get<string>("@filename");
@@ -178,6 +182,15 @@ int main( int argc, const char** argv )
         return -1;
     }
 
+=======
+    int camera = inputName.empty() ? 0 : inputName[0] - '0';
+    if (!capture.open(camera)){
+        cout << "Capture from camera #" <<  camera << " didn't work" << endl;
+    }else {
+        help();
+        return -1;
+    }
+>>>>>>> 14a10895896e5566e4796ece4b5c7708fe6cbe56
     cout << "Video capturing has been started ..." << endl;
 	
 	hdmi_init();
