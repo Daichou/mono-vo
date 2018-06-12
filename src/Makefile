@@ -9,7 +9,7 @@ LIBS     =  -lm -lpthread -ldl -lrt -lopencv_shape -lopencv_stitching -lopencv_o
 all: $(TARGET)
 
 %.o: %.cpp $(HEADERS)
-	$(CC)  -c $< $(CFLAGS) $(INCLUDE_LOC) $(LIBS) $(HEADERS) -o $@
+	$(CC)  -c $< $(CFLAGS) $(INCLUDE_LOC) $(LIBS)  -o $@
 
 $(TARGET): $(OBJECT)
 	$(CC) $^ -o $(TARGET) $(CFLAGS) $(INCLUDE_LOC) $(LIBS) 
@@ -17,4 +17,4 @@ $(TARGET): $(OBJECT)
 .PHONY: clean
 
 clean:
-	$(RM) -f $(TARGET)
+	$(RM) -f $(TARGET) $(OBJECT)

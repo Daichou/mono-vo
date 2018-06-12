@@ -71,26 +71,47 @@ void hdmi_init(){
 }
 
 
-static void hdmi_show(Mat& outputimage)
+void hdmi_show(Mat& outputimage1 ,Mat& outputimage2)
 {
 	int x = 0, y = 0;
 	long int location = 0;
-	int width = outputimage.cols , height = outputimage.rows;
+	int width1 = outputimage1.cols , height1 = outputimage1.rows;
 
-	for(y = 0; y < height; y++)
+	for(y = 0; y < height1; y++)
 	{
-		for(x = 0; x < width; x++)
+		for(x = 0; x < width1; x++)
 		{
 
 			unsigned r, g, b;
 
-			Point p(x % width, y % height);
+			Point p(x % width1, y % height1);
 
 			location = (x+vinfo.xoffset) + (y+vinfo.yoffset) * vinfo.xres;
 
-			b = outputimage.at<Vec3b>(p)[0];
-			g = outputimage.at<Vec3b>(p)[1];
-			r = outputimage.at<Vec3b>(p)[2];
+			b = outputimage1.at<Vec3b>(p)[0];
+			g = outputimage1.at<Vec3b>(p)[1];
+			r = outputimage1.at<Vec3b>(p)[2];
+
+			*(fbp + location) = r << 16 | g << 8 | b << 0;
+
+		}
+	}
+
+	int width2 = outputimage2.cols , height2 = outputimage2.rows;
+	for(y = 0; y < height2; y++)
+	{
+		for(x = 0; x < width2; x++)
+		{
+
+			unsigned r, g, b;
+
+			Point p(x % width1, y % height1);
+
+			location = (x+vinfo.xoffset) + (y+vinfo.yoffset) * vinfo.xres + 800;
+
+			b = outputimage2.at<Vec3b>(p)[0];
+			g = outputimage2.at<Vec3b>(p)[1];
+			r = outputimage2.at<Vec3b>(p)[2];
 
 			*(fbp + location) = r << 16 | g << 8 | b << 0;
 

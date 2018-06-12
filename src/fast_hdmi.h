@@ -16,6 +16,6 @@ using namespace cv;
 using namespace std;
 
 void hdmi_init();
-static void hdmi_show(Mat& outputimage);
+void hdmi_show(Mat& outputimage1,Mat& outputimage2);
 
 #endif

@@ -31,7 +31,7 @@ using namespace cv;
 using namespace std;
 
 #define MAX_FRAME 1000
-#define MIN_NUM_FEAT 2000
+int MIN_NUM_FEAT = 2000;
 
 // IMP: Change the file directories (4 places) according to where your dataset is saved before running!
 
@@ -80,6 +80,8 @@ int main( int argc, char** argv )	{
     ofstream myfile;
     myfile.open ("results1_1.txt");
 
+    std::cout << "input MIN_NUM_FEAT = " << std::endl;
+    std::cin >> MIN_NUM_FEAT;
     double scale = 1.00;
 
     char text[100];
@@ -91,7 +93,6 @@ int main( int argc, char** argv )	{
     int camera = 0 ;
     if (!capture.open(camera)){
         cout << "Capture from camera #" <<  camera << " didn't work" << endl;
-    }else {
         return -1;
     }
     cout << "Video capturing has been started ..." << endl;
@@ -140,7 +141,7 @@ int main( int argc, char** argv )	{
     clock_t begin = clock();
 
 
-    Mat traj = Mat::zeros(600, 600, CV_8UC3);
+    Mat traj = Mat::zeros(600, 480, CV_8UC3);
 
     for(int numFrame=2; numFrame < MAX_FRAME; numFrame++)	{
         //cout << numFrame << endl;
@@ -155,7 +156,7 @@ int main( int argc, char** argv )	{
 
         Mat prevPts(2,prevFeatures.size(), CV_64F), currPts(2,currFeatures.size(), CV_64F);
 
-
+        std::cout << "index = " << numFrame << "prevPts = " << prevFeatures.size() << std::endl;
         for(int i=0;i<prevFeatures.size();i++)	{   //this (x,y) combination makes sense as observed from the source code of triangulatePoints on GitHub
             prevPts.at<double>(0,i) = prevFeatures.at(i).x;
             prevPts.at<double>(1,i) = prevFeatures.at(i).y;
@@ -165,27 +166,25 @@ int main( int argc, char** argv )	{
         }
 
         //scale = getAbsoluteScale(numFrame, 0, t.at<double>(2));
+        //scale = 0.5;
+        cout << "Scale is " << scale << endl;
 
-        //cout << "Scale is " << scale << endl;
+        if ((scale>0.1)&&(t.at<double>(2) > t.at<double>(0)) && (t.at<double>(2) > t.at<double>(1))) {
 
-        //if ((scale>0.1)&&(t.at<double>(2) > t.at<double>(0)) && (t.at<double>(2) > t.at<double>(1))) {
+          t_f = t_f + scale*(R_f*t);
+          R_f = R*R_f;
 
-        //  t_f = t_f + scale*(R_f*t);
-        //  R_f = R*R_f;
-
-        //}
-
-        //else {
-        //cout << "scale below 0.1, or incorrect translation" << endl;
-        //}
+        }else {
+            cout << "scale below 0.1, or incorrect translation" << endl;
+        }
 
         // lines for printing results
         // myfile << t_f.at<double>(0) << " " << t_f.at<double>(1) << " " << t_f.at<double>(2) << endl;
 
         // a redetection is triggered in case the number of feautres being trakced go below a particular threshold
         if (prevFeatures.size() < MIN_NUM_FEAT)	{
-            //cout << "Number of tracked features reduced to " << prevFeatures.size() << endl;
-            //cout << "trigerring redection" << endl;
+            cout << "Number of tracked features reduced to " << prevFeatures.size() << endl;
+            cout << "trigerring redection" << endl;
             featureDetection(prevImage, prevFeatures);
             featureTracking(prevImage,currImage,prevFeatures,currFeatures, status);
 
@@ -200,9 +199,9 @@ int main( int argc, char** argv )	{
 
         rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
         printf("Coordinates: x = %02fm y = %02fm z = %02fm\n", t_f.at<double>(0), t_f.at<double>(1), t_f.at<double>(2));
-        //putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
+        putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
 
-        hdmi_show(  currImage_c );
+        hdmi_show(  currImage_c,traj );
         //imshow( "Trajectory", traj );
     }
 
