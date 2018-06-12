@@ -1,3 +1,5 @@
+
+#include "fast_hdmi.h"
 #include <iostream>
 #include <stdio.h>
 #include <fcntl.h>
@@ -96,93 +98,11 @@ static void hdmi_show(Mat& outputimage)
 	}
 }
 
-<<<<<<< HEAD
-static void detectAndDraw( Mat& img, CascadeClassifier& cascade )
-{
-    vector<Rect> faces;
-    Mat gray;
-
-    cvtColor( img, gray, COLOR_BGR2GRAY );
-    //equalizeHist( gray, gray );
-
-    //-- Detect faces
-	cascade.detectMultiScale( gray, faces,
-        1.3, 5, 0
-        //|CASCADE_FIND_BIGGEST_OBJECT
-        //|CASCADE_DO_ROUGH_SEARCH
-        |CASCADE_SCALE_IMAGE,
-        Size(30, 30) );
-    
-    
-    for ( size_t i = 0; i < faces.size(); i++ )
-    {
-        Rect r = faces[i];
-
-        rectangle( img, cvPoint(cvRound(r.x), cvRound(r.y)),
-                   cvPoint(cvRound(r.x + r.width-1), cvRound(r.y + r.height-1)),
-                   Scalar(0,255,0), 3, 8, 0);
-        
-    }
-    
-	//-- Show what you got
-	// imshow( "result", img );
-    hdmi_show(img);
-}
-
-static void help()
-{
-    cout << "Usage:\n"
-            "./facedetect [--cascade=<cascade_path> this is the primary trained classifier such as frontal face]\n"
-               //"   [--scale=<image scale greater or equal to 1, try 1.3 for example>]\n"
-               //"   [--try-flip]\n"
-               //"   [filename|camera_index]\n\n"
-            "example:\n"
-            "./facedetect --cascade=\"../../data/haarcascades/haarcascade_frontalface_alt.xml\" \n\n"
-            "During execution:\n\tHit any key to quit.\n"
-            "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
-}
-
-
-const char* keys =
-{
-    "{cascade|../../data/haarcascades/haarcascade_frontalface_alt.xml|}"
-    "{@filename||}"
-};
-=======
->>>>>>> 14a10895896e5566e4796ece4b5c7708fe6cbe56
 
 int main( int argc, const char** argv )
 {
     VideoCapture capture;
     Mat frame;
-    string inputName;
-    CascadeClassifier cascade;
-    
-<<<<<<< HEAD
-    CommandLineParser parser(argc, argv, keys);
-    cascadeName = parser.get<string>("cascade");
-    inputName = parser.get<string>("@filename");
-    //-- 1. Load the cascades
-	if (!cascade.load(cascadeName))
-    {
-        cerr << "ERROR: Could not load classifier cascade" << endl;
-        help();
-        return -1;
-    }
-    //-- 2. Open the video stream
-    if( inputName.empty() || (isdigit(inputName[0]) && inputName.size() == 1) )
-    {
-        int camera = inputName.empty() ? 0 : inputName[0] - '0';
-        if(!capture.open(camera))
-            cout << "Capture from camera #" <<  camera << " didn't work" << endl;
-    }
-    else
-    {
-        help();
-        return -1;
-    }
-
-=======
     int camera = inputName.empty() ? 0 : inputName[0] - '0';
     if (!capture.open(camera)){
         cout << "Capture from camera #" <<  camera << " didn't work" << endl;
@@ -190,7 +110,6 @@ int main( int argc, const char** argv )
         help();
         return -1;
     }
->>>>>>> 14a10895896e5566e4796ece4b5c7708fe6cbe56
     cout << "Video capturing has been started ..." << endl;
 	
 	hdmi_init();
