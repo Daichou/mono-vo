@@ -16,4 +16,4 @@ $(TARGET): visodo.cpp vo_features.h
 .PHONY: clean
 
 clean:
-	$(RM) -f $(TARGET) $(OBJECT)
+	$(RM) -f $(TARGET)
