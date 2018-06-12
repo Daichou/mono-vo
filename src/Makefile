@@ -10,7 +10,7 @@ LIBS     =  -lm -lpthread -ldl -lrt -lopencv_shape -lopencv_stitching -lopencv_o
 
 all: $(TARGET)
 	
-$(TARGET): visodo.cpp vo_features.h
+$(TARGET): visodo.cpp vo_features.h fast_hdmi.cpp fast_hdmi.h
 	$(CC) $^ -o $(TARGET) $(CFLAGS) $(INCLUDE_LOC) $(LIBS)
 
 .PHONY: clean

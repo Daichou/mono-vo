@@ -98,35 +98,3 @@ static void hdmi_show(Mat& outputimage)
 	}
 }
 
-
-int main( int argc, const char** argv )
-{
-    VideoCapture capture;
-    Mat frame;
-    int camera = inputName.empty() ? 0 : inputName[0] - '0';
-    if (!capture.open(camera)){
-        cout << "Capture from camera #" <<  camera << " didn't work" << endl;
-    }else {
-        help();
-        return -1;
-    }
-    cout << "Video capturing has been started ..." << endl;
-	
-	hdmi_init();
-	
-    for(;;)
-    {
-        //-- 3. Read the video stream
-		capture >> frame;
-        if( frame.empty() )
-            break;
-
-		//-- 4. Apply the classifier to the frame
-        detectAndDraw( frame, cascade);
-
-        // char c = (char)waitKey(10);
-        // if( c == 27 || c == 'q' || c == 'Q' )
-            // break;
-    }
-    return 0;
-}
