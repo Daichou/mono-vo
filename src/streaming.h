@@ -11,10 +11,9 @@ public:
     struct fb_var_screeninfo vinfo;
     struct fb_fix_screeninfo finfo;
     
-    signed *fbp = 0;
+    signed *fbp;
     string cascadeName;
 
-    // init the hdmi interface
     Streaming();
     void hdmi_show(Mat& outputimage);
 
