@@ -1,0 +1,582 @@
+The target system is: Linux -  - arm
+The host system is: Linux - 4.16.13-1-ARCH - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/ubuntu/opencv-3.1.0/build/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/ubuntu/opencv-3.1.0/build/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec776256529/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec776256529.dir/build.make CMakeFiles/cmTryCompileExec776256529.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec776256529.dir/testCXXCompiler.cxx.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++     -o CMakeFiles/cmTryCompileExec776256529.dir/testCXXCompiler.cxx.o -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec776256529
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec776256529.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++        CMakeFiles/cmTryCompileExec776256529.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec776256529 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4021924827/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4021924827.dir/build.make CMakeFiles/cmTryCompileExec4021924827.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++     -o CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec4021924827
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4021924827.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++      -v CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec4021924827 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++
+COLLECT_LTO_WRAPPER=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/lto-wrapper
+Target: arm-xilinx-linux-gnueabi
+Configured with: /scratch/janisjo/build6/2013.05-xilinx-linux-release/src/gcc-4.7-2013.05/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-xilinx-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-arch=armv5te --with-arch=armv7-a --with-cpu=cortex-a9 --with-float=softfp --with-fpu=neon-fp16 --disable-multilib --with-gnu-as --with-gnu-ld --with-specs='%{save-temps: -fverbose-asm} %{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:;:-funwind-tables} -D__CS_SOURCERYGXX_MAJ__=2013 -D__CS_SOURCERYGXX_MIN__=5 -D__CS_SOURCERYGXX_REV__=40 %{O2:%{!fno-remove-local-statics: -fremove-local-statics}} %{O*:%{O|O0|O1|O2|Os:;:%{!fno-remove-local-statics: -fremove-local-statics}}}' --enable-languages=c,c++ --enable-shared --enable-lto --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery CodeBench Lite 2013.05-40' --with-bugurl=https://sourcery.mentor.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-xilinx-linux-gnueabi/libc --with-build-sysroot=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/libc --with-gmp=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpfr=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpc=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-ppl=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-cloog=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-libelf=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --disable-libgomp --disable-libitm --enable-poison-system-directories --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin SED=sed
+Thread model: posix
+gcc version 4.7.3 (Sourcery CodeBench Lite 2013.05-40) 
+COMPILER_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/bin/
+LIBRARY_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4021924827' '-rdynamic' '-shared-libgcc' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon-fp16' '-mtls-dialect=gnu' '-funwind-tables' '-D' '__CS_SOURCERYGXX_MAJ__=2013' '-D' '__CS_SOURCERYGXX_MIN__=5' '-D' '__CS_SOURCERYGXX_REV__=40'
+ /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/collect2 --sysroot=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec4021924827 /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crt1.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crti.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtbegin.o -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3 -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtend.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crtn.o
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-xilinx-linux-gnueabi-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec4021924827/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4021924827.dir/build.make CMakeFiles/cmTryCompileExec4021924827.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++     -o CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec4021924827]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4021924827.dir/link.txt --verbose=1]
+  ignore line: [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++      -v CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec4021924827 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/lto-wrapper]
+  ignore line: [Target: arm-xilinx-linux-gnueabi]
+  ignore line: [Configured with: /scratch/janisjo/build6/2013.05-xilinx-linux-release/src/gcc-4.7-2013.05/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-xilinx-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-arch=armv5te --with-arch=armv7-a --with-cpu=cortex-a9 --with-float=softfp --with-fpu=neon-fp16 --disable-multilib --with-gnu-as --with-gnu-ld --with-specs='%{save-temps: -fverbose-asm} %{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:]
+  ignore line: [:-funwind-tables} -D__CS_SOURCERYGXX_MAJ__=2013 -D__CS_SOURCERYGXX_MIN__=5 -D__CS_SOURCERYGXX_REV__=40 %{O2:%{!fno-remove-local-statics: -fremove-local-statics}} %{O*:%{O|O0|O1|O2|Os:]
+  ignore line: [:%{!fno-remove-local-statics: -fremove-local-statics}}}' --enable-languages=c,c++ --enable-shared --enable-lto --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery CodeBench Lite 2013.05-40' --with-bugurl=https://sourcery.mentor.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-xilinx-linux-gnueabi/libc --with-build-sysroot=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/libc --with-gmp=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpfr=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpc=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-ppl=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-cloog=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-libelf=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --disable-libgomp --disable-libitm --enable-poison-system-directories --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin SED=sed]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.7.3 (Sourcery CodeBench Lite 2013.05-40) ]
+  ignore line: [COMPILER_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4021924827' '-rdynamic' '-shared-libgcc' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon-fp16' '-mtls-dialect=gnu' '-funwind-tables' '-D' '__CS_SOURCERYGXX_MAJ__=2013' '-D' '__CS_SOURCERYGXX_MIN__=5' '-D' '__CS_SOURCERYGXX_REV__=40']
+  link line: [ /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/collect2 --sysroot=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec4021924827 /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crt1.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crti.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtbegin.o -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3 -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtend.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crtn.o]
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/collect2] ==> ignore
+    arg [--sysroot=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec4021924827] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crt1.o] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crti.o] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtbegin.o] ==> ignore
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec4021924827.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtend.o] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.7.3]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/lib]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/lib]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.7.3;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/lib;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/lib;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/lib]
+  implicit fwks: []
+
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3751742072/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3751742072.dir/build.make CMakeFiles/cmTryCompileExec3751742072.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3751742072.dir/testCCompiler.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc    -o CMakeFiles/cmTryCompileExec3751742072.dir/testCCompiler.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3751742072
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3751742072.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc       CMakeFiles/cmTryCompileExec3751742072.dir/testCCompiler.c.o  -o cmTryCompileExec3751742072 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec355525975/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec355525975.dir/build.make CMakeFiles/cmTryCompileExec355525975.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc    -o CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec355525975
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec355525975.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -v CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec355525975 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc
+COLLECT_LTO_WRAPPER=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/lto-wrapper
+Target: arm-xilinx-linux-gnueabi
+Configured with: /scratch/janisjo/build6/2013.05-xilinx-linux-release/src/gcc-4.7-2013.05/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-xilinx-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-arch=armv5te --with-arch=armv7-a --with-cpu=cortex-a9 --with-float=softfp --with-fpu=neon-fp16 --disable-multilib --with-gnu-as --with-gnu-ld --with-specs='%{save-temps: -fverbose-asm} %{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:;:-funwind-tables} -D__CS_SOURCERYGXX_MAJ__=2013 -D__CS_SOURCERYGXX_MIN__=5 -D__CS_SOURCERYGXX_REV__=40 %{O2:%{!fno-remove-local-statics: -fremove-local-statics}} %{O*:%{O|O0|O1|O2|Os:;:%{!fno-remove-local-statics: -fremove-local-statics}}}' --enable-languages=c,c++ --enable-shared --enable-lto --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery CodeBench Lite 2013.05-40' --with-bugurl=https://sourcery.mentor.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-xilinx-linux-gnueabi/libc --with-build-sysroot=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/libc --with-gmp=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpfr=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpc=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-ppl=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-cloog=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-libelf=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --disable-libgomp --disable-libitm --enable-poison-system-directories --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin SED=sed
+Thread model: posix
+gcc version 4.7.3 (Sourcery CodeBench Lite 2013.05-40) 
+COMPILER_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/bin/
+LIBRARY_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec355525975' '-rdynamic' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon-fp16' '-mtls-dialect=gnu' '-funwind-tables' '-D' '__CS_SOURCERYGXX_MAJ__=2013' '-D' '__CS_SOURCERYGXX_MIN__=5' '-D' '__CS_SOURCERYGXX_REV__=40'
+ /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/collect2 --sysroot=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec355525975 /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crt1.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crti.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtbegin.o -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3 -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtend.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crtn.o
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-xilinx-linux-gnueabi-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec355525975/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec355525975.dir/build.make CMakeFiles/cmTryCompileExec355525975.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc    -o CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec355525975]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec355525975.dir/link.txt --verbose=1]
+  ignore line: [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -v CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec355525975 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/lto-wrapper]
+  ignore line: [Target: arm-xilinx-linux-gnueabi]
+  ignore line: [Configured with: /scratch/janisjo/build6/2013.05-xilinx-linux-release/src/gcc-4.7-2013.05/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-xilinx-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-arch=armv5te --with-arch=armv7-a --with-cpu=cortex-a9 --with-float=softfp --with-fpu=neon-fp16 --disable-multilib --with-gnu-as --with-gnu-ld --with-specs='%{save-temps: -fverbose-asm} %{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:]
+  ignore line: [:-funwind-tables} -D__CS_SOURCERYGXX_MAJ__=2013 -D__CS_SOURCERYGXX_MIN__=5 -D__CS_SOURCERYGXX_REV__=40 %{O2:%{!fno-remove-local-statics: -fremove-local-statics}} %{O*:%{O|O0|O1|O2|Os:]
+  ignore line: [:%{!fno-remove-local-statics: -fremove-local-statics}}}' --enable-languages=c,c++ --enable-shared --enable-lto --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery CodeBench Lite 2013.05-40' --with-bugurl=https://sourcery.mentor.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-xilinx-linux-gnueabi/libc --with-build-sysroot=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/libc --with-gmp=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpfr=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-mpc=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-ppl=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-cloog=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --with-libelf=/scratch/janisjo/build6/2013.05-xilinx-linux-release/obj/pkg-2013.05-40-arm-xilinx-linux-gnueabi/xilinx-2013.05-40-arm-xilinx-linux-gnueabi.extras/host-libs-i686-pc-linux-gnu/usr --disable-libgomp --disable-libitm --enable-poison-system-directories --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin --with-build-time-tools=/scratch/janisjo/build6/2013.05-xilinx-linux-release/install/arm-xilinx-linux-gnueabi/bin SED=sed]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.7.3 (Sourcery CodeBench Lite 2013.05-40) ]
+  ignore line: [COMPILER_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib/:/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec355525975' '-rdynamic' '-march=armv7-a' '-mfloat-abi=softfp' '-mfpu=neon-fp16' '-mtls-dialect=gnu' '-funwind-tables' '-D' '__CS_SOURCERYGXX_MAJ__=2013' '-D' '__CS_SOURCERYGXX_MIN__=5' '-D' '__CS_SOURCERYGXX_REV__=40']
+  link line: [ /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/collect2 --sysroot=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec355525975 /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crt1.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crti.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtbegin.o -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3 -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib -L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtend.o /opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crtn.o]
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../libexec/gcc/arm-xilinx-linux-gnueabi/4.7.3/collect2] ==> ignore
+    arg [--sysroot=/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec355525975] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crt1.o] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crti.o] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtbegin.o] ==> ignore
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib]
+    arg [-L/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib] ==> dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec355525975.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/crtend.o] ==> ignore
+    arg [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.7.3]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-linux-gnueabi/4.7.3/../../../../arm-xilinx-linux-gnueabi/lib] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/lib]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/lib] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/lib]
+  collapse library dir [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/../arm-xilinx-linux-gnueabi/libc/usr/lib] ==> [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.7.3;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/lib/gcc;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/lib;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/lib;/opt/Xilinx/SDK/2013.4/gnu/arm/lin/arm-xilinx-linux-gnueabi/libc/usr/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3044993042/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3044993042.dir/build.make CMakeFiles/cmTryCompileExec3044993042.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3044993042.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3044993042.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3044993042
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3044993042.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3044993042.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3044993042 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2268342241/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2268342241.dir/build.make CMakeFiles/cmTryCompileExec2268342241.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2268342241.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2268342241.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2268342241
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2268342241.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec2268342241.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2268342241 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1502203267/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1502203267.dir/build.make CMakeFiles/cmTryCompileExec1502203267.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1502203267.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1502203267.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1502203267
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1502203267.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec1502203267.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1502203267 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4152098217/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4152098217.dir/build.make CMakeFiles/cmTryCompileExec4152098217.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4152098217.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec4152098217.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec4152098217
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4152098217.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec4152098217.dir/CheckIncludeFile.c.o  -o cmTryCompileExec4152098217 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec415738629/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec415738629.dir/build.make CMakeFiles/cmTryCompileExec415738629.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec415738629.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec415738629.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTryCompileExec415738629
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec415738629.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec415738629.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTryCompileExec415738629 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2330501559/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2330501559.dir/build.make CMakeFiles/cmTryCompileExec2330501559.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2330501559.dir/CheckFunctionExists.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=fseeko -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2330501559.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+/usr/share/cmake-2.8/Modules/CheckFunctionExists.c:3:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+Linking C executable cmTryCompileExec2330501559
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2330501559.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=fseeko -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec2330501559.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2330501559 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1690538519/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1690538519.dir/build.make CMakeFiles/cmTryCompileExec1690538519.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1690538519.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1690538519.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1690538519
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1690538519.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec1690538519.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1690538519 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file assert.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3776432112/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3776432112.dir/build.make CMakeFiles/cmTryCompileExec3776432112.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3776432112.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3776432112.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3776432112
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3776432112.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3776432112.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3776432112 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3133012586/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3133012586.dir/build.make CMakeFiles/cmTryCompileExec3133012586.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3133012586.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3133012586.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3133012586
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3133012586.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3133012586.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3133012586 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function mmap exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1837634056/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1837634056.dir/build.make CMakeFiles/cmTryCompileExec1837634056.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1837634056.dir/CheckFunctionExists.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=mmap -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1837634056.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+/usr/share/cmake-2.8/Modules/CheckFunctionExists.c:3:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+Linking C executable cmTryCompileExec1837634056
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1837634056.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=mmap -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec1837634056.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1837634056 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file search.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec613741241/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec613741241.dir/build.make CMakeFiles/cmTryCompileExec613741241.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec613741241.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec613741241.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec613741241
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec613741241.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec613741241.dir/CheckIncludeFile.c.o  -o cmTryCompileExec613741241 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1500471544/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1500471544.dir/build.make CMakeFiles/cmTryCompileExec1500471544.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1500471544.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1500471544.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1500471544
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1500471544.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec1500471544.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1500471544 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3126832156/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3126832156.dir/build.make CMakeFiles/cmTryCompileExec3126832156.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3126832156.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3126832156.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3126832156
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3126832156.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3126832156.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3126832156 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file semaphore.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3213014213/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3213014213.dir/build.make CMakeFiles/cmTryCompileExec3213014213.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3213014213.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3213014213.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3213014213
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3213014213.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3213014213.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3213014213 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1469654931/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1469654931.dir/build.make CMakeFiles/cmTryCompileExec1469654931.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1469654931.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1469654931.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1469654931
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1469654931.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec1469654931.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1469654931 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec730500009/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec730500009.dir/build.make CMakeFiles/cmTryCompileExec730500009.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec730500009.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec730500009.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec730500009
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec730500009.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec730500009.dir/CheckIncludeFile.c.o  -o cmTryCompileExec730500009 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1954187997/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1954187997.dir/build.make CMakeFiles/cmTryCompileExec1954187997.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1954187997.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1954187997.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1954187997
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1954187997.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec1954187997.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1954187997 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3563182313/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3563182313.dir/build.make CMakeFiles/cmTryCompileExec3563182313.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3563182313.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3563182313.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3563182313
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3563182313.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3563182313.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3563182313 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2469725064/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2469725064.dir/build.make CMakeFiles/cmTryCompileExec2469725064.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2469725064.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2469725064.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2469725064
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2469725064.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec2469725064.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2469725064 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3589258974/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3589258974.dir/build.make CMakeFiles/cmTryCompileExec3589258974.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3589258974.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3589258974.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3589258974
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3589258974.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3589258974.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3589258974 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2214647139/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2214647139.dir/build.make CMakeFiles/cmTryCompileExec2214647139.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2214647139.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2214647139.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2214647139
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2214647139.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec2214647139.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2214647139 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4092600872/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4092600872.dir/build.make CMakeFiles/cmTryCompileExec4092600872.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4092600872.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -mfpu=neon -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec4092600872.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec4092600872
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4092600872.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -mfpu=neon -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec4092600872.dir/CheckIncludeFile.c.o  -o cmTryCompileExec4092600872 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+

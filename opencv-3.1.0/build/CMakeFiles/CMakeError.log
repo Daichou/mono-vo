@@ -1,0 +1,486 @@
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec598054558/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec598054558.dir/build.make CMakeFiles/cmTryCompileExec598054558.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec598054558.dir/TestEndianess.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec598054558.dir/TestEndianess.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec598054558
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec598054558.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec598054558.dir/TestEndianess.c.o  -o cmTryCompileExec598054558 -rdynamic 
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3125506030/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3125506030.dir/build.make CMakeFiles/cmTryCompileExec3125506030.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3125506030.dir/OFF64_T.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3125506030.dir/OFF64_T.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:19:12: error: 'off64_t' undeclared here (not in a function)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3125506030.dir/OFF64_T.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3125506030/fast] Error 2
+
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec66163913/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec66163913.dir/build.make CMakeFiles/cmTryCompileExec66163913.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec66163913.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec66163913.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:16: fatal error: io.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec66163913.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec66163913/fast] Error 2
+
+
+Determining if the function jbg_newlen exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3247066638/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3247066638.dir/build.make CMakeFiles/cmTryCompileExec3247066638.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3247066638.dir/CheckFunctionExists.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=jbg_newlen -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3247066638.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+/usr/share/cmake-2.8/Modules/CheckFunctionExists.c:3:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+Linking C executable cmTryCompileExec3247066638
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3247066638.dir/link.txt --verbose=1
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=jbg_newlen -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec3247066638.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3247066638 -rdynamic 
+CMakeFiles/cmTryCompileExec3247066638.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text.startup.main+0xc): undefined reference to `jbg_newlen'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3247066638] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3247066638/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2671809752/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2671809752.dir/build.make CMakeFiles/cmTryCompileExec2671809752.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2671809752.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2671809752.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2671809752.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2671809752/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1670255212/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1670255212.dir/build.make CMakeFiles/cmTryCompileExec1670255212.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1670255212.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1670255212.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1670255212.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1670255212/fast] Error 2
+
+
+Determining if the include file libavformat/avformat.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1154534097/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1154534097.dir/build.make CMakeFiles/cmTryCompileExec1154534097.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1154534097.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1154534097.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:34: fatal error: libavformat/avformat.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1154534097.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1154534097/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1897758033/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1897758033.dir/build.make CMakeFiles/cmTryCompileExec1897758033.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1897758033.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1897758033.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1897758033.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1897758033/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2427356559/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2427356559.dir/build.make CMakeFiles/cmTryCompileExec2427356559.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2427356559.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2427356559.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2427356559.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2427356559/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1599549031/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1599549031.dir/build.make CMakeFiles/cmTryCompileExec1599549031.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1599549031.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1599549031.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1599549031.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1599549031/fast] Error 2
+
+
+Determining if the include file libavformat/avformat.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3802135629/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3802135629.dir/build.make CMakeFiles/cmTryCompileExec3802135629.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3802135629.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3802135629.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:34: fatal error: libavformat/avformat.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3802135629.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3802135629/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1104359123/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1104359123.dir/build.make CMakeFiles/cmTryCompileExec1104359123.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1104359123.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1104359123.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+compilation terminated.
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1104359123.dir/CheckIncludeFile.c.o] Error 1
+gmake: *** [cmTryCompileExec1104359123/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2800076443/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2800076443.dir/build.make CMakeFiles/cmTryCompileExec2800076443.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2800076443.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2800076443.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2800076443.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2800076443/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1145225330/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1145225330.dir/build.make CMakeFiles/cmTryCompileExec1145225330.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1145225330.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1145225330.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1145225330.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1145225330/fast] Error 2
+
+
+Determining if the include file libavformat/avformat.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec966041475/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec966041475.dir/build.make CMakeFiles/cmTryCompileExec966041475.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec966041475.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec966041475.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:34: fatal error: libavformat/avformat.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec966041475.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec966041475/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3950471548/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3950471548.dir/build.make CMakeFiles/cmTryCompileExec3950471548.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3950471548.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3950471548.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3950471548.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3950471548/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1750021469/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1750021469.dir/build.make CMakeFiles/cmTryCompileExec1750021469.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1750021469.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1750021469.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1750021469.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1750021469/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3329825361/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3329825361.dir/build.make CMakeFiles/cmTryCompileExec3329825361.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3329825361.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3329825361.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3329825361.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3329825361/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3988458216/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3988458216.dir/build.make CMakeFiles/cmTryCompileExec3988458216.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3988458216.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3988458216.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3988458216.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3988458216/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1613776139/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1613776139.dir/build.make CMakeFiles/cmTryCompileExec1613776139.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1613776139.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1613776139.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1613776139.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1613776139/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3014163197/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3014163197.dir/build.make CMakeFiles/cmTryCompileExec3014163197.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3014163197.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3014163197.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3014163197.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3014163197/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2761503615/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2761503615.dir/build.make CMakeFiles/cmTryCompileExec2761503615.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2761503615.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2761503615.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2761503615.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2761503615/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2361133979/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2361133979.dir/build.make CMakeFiles/cmTryCompileExec2361133979.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2361133979.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2361133979.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2361133979.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2361133979/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec842866407/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec842866407.dir/build.make CMakeFiles/cmTryCompileExec842866407.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec842866407.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec842866407.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec842866407.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec842866407/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec222811012/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec222811012.dir/build.make CMakeFiles/cmTryCompileExec222811012.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec222811012.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -mfpu=neon -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec222811012.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec222811012.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec222811012/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec545296897/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec545296897.dir/build.make CMakeFiles/cmTryCompileExec545296897.dir/build
+gmake[1]: Entering directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec545296897.dir/CheckIncludeFile.c.o
+/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -mfpu=neon -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec545296897.dir/CheckIncludeFile.c.o   -c /home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTryCompileExec545296897.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/home/ubuntu/opencv-3.1.0/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec545296897/fast] Error 2
+
+
