@@ -26,6 +26,9 @@
 
 #include "vo_features.h"
 #include "fast_hdmi.h"
+#include <pthread.h>
+#include <unistd.h>
+#include <semaphore.h>
 
 using namespace cv;
 using namespace std;
@@ -33,47 +36,38 @@ using namespace std;
 #define MAX_FRAME 1000
 int MIN_NUM_FEAT = 2000;
 
-// IMP: Change the file directories (4 places) according to where your dataset is saved before running!
+sem_t semaphore;
 
-double getAbsoluteScale(int frame_id, int sequence_id, double z_cal)	{
+Mat currImage_c;
+Mat traj = Mat::zeros(600, 480, CV_8UC3);
 
-    string line;
-    int i = 0;
-    ifstream myfile ("/home/avisingh/Datasets/KITTI_VO/00.txt");
-    double x =0, y=0, z = 0;
-    double x_prev, y_prev, z_prev;
-    if (myfile.is_open())
-    {
-        while (( getline (myfile,line) ) && (i<=frame_id))
-        {
-            z_prev = z;
-            x_prev = x;
-            y_prev = y;
-            std::istringstream in(line);
-            //cout << line << '\n';
-            for (int j=0; j<12; j++)  {
-                in >> z ;
-                if (j==7) y=z;
-                if (j==3)  x=z;
-            }
+struct Point_t{
+    int x;
+    int y;
+} position;
 
-            i++;
-        }
-        myfile.close();
+void* display_thread(void*)
+{
+    char text[100];
+    int fontFace = FONT_HERSHEY_PLAIN;
+    double fontScale = 1;
+    int thickness = 1;  
+    cv::Point textOrg(10, 50);
+    while(1){
+        sem_wait(&semaphore);
+        circle(traj, Point(position.x, position.y) ,1, CV_RGB(255,0,0), 2);
+
+        rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
+        putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
+
+        hdmi_show(  currImage_c,traj );
+
     }
-
-    else {
-        cout << "Unable to open file";
-        return 0;
-    }
-
-    return sqrt((x-x_prev)*(x-x_prev) + (y-y_prev)*(y-y_prev) + (z-z_prev)*(z-z_prev)) ;
-
+    pthread_exit(NULL);
 }
 
-
-int main( int argc, char** argv )	{
-
+int main( int argc, char** argv )
+{
     Mat img_1, img_2;
     Mat R_f, t_f; //the final rotation and tranlation vectors containing the 
 
@@ -84,11 +78,6 @@ int main( int argc, char** argv )	{
     std::cin >> MIN_NUM_FEAT;
     double scale = 1.00;
 
-    char text[100];
-    int fontFace = FONT_HERSHEY_PLAIN;
-    double fontScale = 1;
-    int thickness = 1;  
-    cv::Point textOrg(10, 50);
     VideoCapture capture;
     int camera = 0 ;
     if (!capture.open(camera)){
@@ -140,12 +129,11 @@ int main( int argc, char** argv )	{
 
     clock_t begin = clock();
 
-
-    Mat traj = Mat::zeros(600, 480, CV_8UC3);
+    sem_init(&semaphore, 0, 0);
+    pthread_t display_th;
+    pthread_create(&display_th, NULL, display_thread, NULL);
 
     for(int numFrame=2; numFrame < MAX_FRAME; numFrame++)	{
-        //cout << numFrame << endl;
-        Mat currImage_c;
         capture >> currImage_c;
         cvtColor(currImage_c, currImage, COLOR_BGR2GRAY);
         vector<uchar> status;
@@ -192,25 +180,16 @@ int main( int argc, char** argv )	{
 
         prevImage = currImage.clone();
         prevFeatures = currFeatures;
-
-        int x = int(t_f.at<double>(0)) + 300;
-        int y = int(t_f.at<double>(2)) + 100;
-        circle(traj, Point(x, y) ,1, CV_RGB(255,0,0), 2);
-
-        rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
+        position.x = int(t_f.at<double>(0)) + 300;
+        position.y = int(t_f.at<double>(2)) + 100;
         printf("Coordinates: x = %02fm y = %02fm z = %02fm\n", t_f.at<double>(0), t_f.at<double>(1), t_f.at<double>(2));
-        putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
-
-        hdmi_show(  currImage_c,traj );
-        //imshow( "Trajectory", traj );
+        sem_post(&semaphore);
     }
 
     clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     cout << "Total time taken: " << elapsed_secs << "s" << endl;
-
-    //cout << R_f << endl;
-    //cout << t_f << endl;
+    pthread_join(display_th, NULL);
 
     return 0;
 }
