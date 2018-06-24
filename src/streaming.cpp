@@ -11,7 +11,8 @@ fb_var_screeninfo Streaming::vinfo;
 fb_fix_screeninfo Streaming::screen_finfo;
 fb_fix_screeninfo Streaming::finfo;
 
-Streaming::Streaming(){
+Streaming::Streaming()
+{
     //need to find a way to know error
     if (init_v4l2() == FALSE )
         throw("init v4l2 failed ");
@@ -23,7 +24,13 @@ Streaming::Streaming(){
 
 }
 
-void Streaming::init_hdmi(){
+Streaming::~Streaming()
+{
+
+};
+
+void Streaming::init_hdmi()
+{
     int x = 0, y = 0;
     long int location = 0;
     this->screensize =0;
