@@ -45,7 +45,6 @@ private:
     int init_v4l2();
 
     int close_v4l2();
-    void close_hdmi();
     void stop_streaming();
     int v4l2_grab();
     void yuyv_2_rgb888(int buffer_index);

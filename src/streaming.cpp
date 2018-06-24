@@ -282,7 +282,7 @@ cv::Mat Streaming::getFrame(){
     //沒意外的話是0
     yuyv_2_rgb888(this->buf.index);
 
-    return cv::Mat(640,480,CV_8UC3,frame_buffer);
+    return cv::Mat(480,640,CV_8UC3,frame_buffer);
 }
 
 void Streaming::yuyv_2_rgb888( int buffer_index ){
