@@ -26,8 +26,30 @@ Streaming::Streaming()
 
 Streaming::~Streaming()
 {
+  stop_streaming();
+  close_hdmi();
 
 };
+
+void Streaming::stop_streaming(){
+    unsigned int n_buffers;
+
+    // 7. Stop streaming/////////////////////////////////
+    type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    if (ioctl(this->fd, VIDIOC_STREAMOFF, &(this->type)))
+        perror("Stop streaming error:");
+    /////////////////////////////////////////////////////
+
+    // 8. Memory unmap///////////////////////////////////
+    for (n_buffers = 0; n_buffers < this->req.count; n_buffers++)
+        munmap(this->buffers[n_buffers].start, this->buffers[n_buffers].length);
+    /////////////////////////////////////////////////////
+
+    // 9. Close device///////////////////////////////////
+    close_v4l2();
+    /////////////////////////////////////////////////////
+};
+
 
 void Streaming::init_hdmi()
 {
@@ -157,6 +179,11 @@ int Streaming::close_v4l2(){
         return TRUE;
     }
     return FALSE;
+}
+
+void Streaming::close_hdmi(){
+  munmap(this->hdmi_frame_bfr_pt, this->screensize);
+  close(this->hdmi_fd);
 }
 
 int Streaming::v4l2_grab(){
