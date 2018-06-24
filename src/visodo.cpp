@@ -29,6 +29,7 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <semaphore.h>
+#include "streaming.h" 
 
 using namespace cv;
 using namespace std;
@@ -37,6 +38,7 @@ using namespace std;
 int MIN_NUM_FEAT = 2000;
 
 sem_t semaphore;
+
 
 Mat currImage_c;
 Mat traj = Mat::zeros(600, 480, CV_8UC3);
@@ -75,26 +77,34 @@ int main( int argc, char** argv )
     ofstream myfile;
     myfile.open ("results1_1.txt");
 
+    Streaming video_capture;
+
     std::cout << "input MIN_NUM_FEAT = " << std::endl;
     std::cin >> MIN_NUM_FEAT;
     double scale = 1.00;
 
-    VideoCapture capture;
-    capture.set(CV_CAP_PROP_BUFFERSIZE, 1);
-    int camera = 0 ;
-    if (!capture.open(camera)){
-        cout << "Capture from camera #" <<  camera << " didn't work" << endl;
-        return -1;
-    }
-    cout << "Video capturing has been started ..." << endl;
+    //VideoCapture capture;
+    //capture.set(CV_CAP_PROP_BUFFERSIZE, 1);
+    //int camera = 0 ;
+    //if (!capture.open(camera)){
+    //    cout << "Capture from camera #" <<  camera << " didn't work" << endl;
+    //    return -1;
+    //}
+    //cout << "Video capturing has been started ..." << endl;
 
     hdmi_init();
 
     Mat img_1_c;
     Mat img_2_c;
     
-    capture >> img_1_c;
-    capture >> img_2_c;
+    video_capture.askFrame();
+    img_1_c = video_capture.getFrame();
+
+    video_capture.askFrame();
+    img_2_c = video_capture.getFrame();
+
+    //capture >> img_1_c;
+    //capture >> img_2_c;
 
     if ( !img_1_c.data || !img_2_c.data ) {
         std::cout<< " --(!) Error reading images " << std::endl; return -1;
@@ -136,7 +146,9 @@ int main( int argc, char** argv )
     pthread_create(&display_th, NULL, display_thread, NULL);
 
     for(int numFrame=2; numFrame < MAX_FRAME; numFrame++)	{
-        while(!capture.read(currImage_c));
+        //while(!capture.read(currImage_c));
+        video_capture.askFrame();
+        currImage_c = video_capture.getFrame();
         //capture >> currImage_c;
         cvtColor(currImage_c, currImage, COLOR_BGR2GRAY);
         vector<uchar> status;

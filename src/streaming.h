@@ -36,9 +36,6 @@ public:
     //close hdmi
     ~Streaming();
 
-    //等待實踐的功能
-    //void hdmi_show(Mat& outputimage);
-
 private:
     bool asked_for_frame;
     bool get_frame;
