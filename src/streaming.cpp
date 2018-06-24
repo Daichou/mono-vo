@@ -6,12 +6,18 @@
 
 using namespace std;
 
+fb_var_screeninfo Streaming::screen_vinfo;
+fb_var_screeninfo Streaming::vinfo;
+fb_fix_screeninfo Streaming::screen_finfo;
+fb_fix_screeninfo Streaming::finfo;
+
 Streaming::Streaming(){
     //need to find a way to know error
     if (init_v4l2() == FALSE )
         throw("init v4l2 failed ");
 
     init_hdmi();
+
     this->asked_for_frame = FALSE;
     this->get_frame=FALSE;
 
