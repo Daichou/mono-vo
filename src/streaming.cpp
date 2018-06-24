@@ -325,12 +325,12 @@ void Streaming::yuyv_2_rgb888( int buffer_index ){
             b2 = (b2>255)? 255: ((b2<0)? 0: b2);
             g2 = (g2>255)? 255: ((g2<0)? 0: g2);
 
-    		*(frame_buffer + ((IMAGEHEIGHT-1-i)*(IMAGEWIDTH/2)+j)*6    ) = (unsigned char)b1;
-    		*(frame_buffer + ((IMAGEHEIGHT-1-i)*(IMAGEWIDTH/2)+j)*6 + 1) = (unsigned char)g1;
-    		*(frame_buffer + ((IMAGEHEIGHT-1-i)*(IMAGEWIDTH/2)+j)*6 + 2) = (unsigned char)r1;
-    		*(frame_buffer + ((IMAGEHEIGHT-1-i)*(IMAGEWIDTH/2)+j)*6 + 3) = (unsigned char)b2;
-    		*(frame_buffer + ((IMAGEHEIGHT-1-i)*(IMAGEWIDTH/2)+j)*6 + 4) = (unsigned char)g2;
-    		*(frame_buffer + ((IMAGEHEIGHT-1-i)*(IMAGEWIDTH/2)+j)*6 + 5) = (unsigned char)r2;
+    		*(frame_buffer + (i*(IMAGEWIDTH/2)+j)*6    ) = (unsigned char)b1;
+    		*(frame_buffer + (i*(IMAGEWIDTH/2)+j)*6 + 1) = (unsigned char)g1;
+    		*(frame_buffer + (i*(IMAGEWIDTH/2)+j)*6 + 2) = (unsigned char)r1;
+    		*(frame_buffer + (i*(IMAGEWIDTH/2)+j)*6 + 3) = (unsigned char)b2;
+    		*(frame_buffer + (i*(IMAGEWIDTH/2)+j)*6 + 4) = (unsigned char)g2;
+    		*(frame_buffer + (i*(IMAGEWIDTH/2)+j)*6 + 5) = (unsigned char)r2;
     	}
     }
 }

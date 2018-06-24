@@ -37,16 +37,21 @@ using namespace std;
 #define MAX_FRAME 1000
 int MIN_NUM_FEAT = 2000;
 
+Streaming video_capture;
 sem_t semaphore;
 
+bool update_flag;
+pthread_mutex_t lock;
 
-Mat currImage_c;
+Mat currImage_c,display_image;
 Mat traj = Mat::zeros(600, 480, CV_8UC3);
 
 struct Point_t{
     int x;
     int y;
 } position;
+
+
 
 void* display_thread(void*)
 {
@@ -55,14 +60,26 @@ void* display_thread(void*)
     double fontScale = 1;
     int thickness = 1;  
     cv::Point textOrg(10, 50);
+    circle(traj, Point(300, 100) ,1, CV_RGB(255,0,0), 2);
+    rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
+    putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
     while(1){
-        sem_wait(&semaphore);
-        circle(traj, Point(position.x, position.y) ,1, CV_RGB(255,0,0), 2);
-
-        rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
-        putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
-
-        hdmi_show(  currImage_c,traj );
+        //sem_wait(&semaphore);
+        if (update_flag){
+            pthread_mutex_lock(&lock);
+            update_flag = false;
+            video_capture.askFrame();
+            currImage_c = video_capture.getFrame();
+            pthread_mutex_unlock(&lock);
+            circle(traj, Point(position.x, position.y) ,1, CV_RGB(255,0,0), 2);
+            rectangle( traj, Point(10, 30), Point(550, 50), CV_RGB(0,0,0), CV_FILLED);
+            putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
+            hdmi_show(  currImage_c,traj );
+        }else{
+            video_capture.askFrame();
+            display_image = video_capture.getFrame();
+            hdmi_show(  display_image,traj );
+        }
     }
     pthread_exit(NULL);
 }
@@ -77,7 +94,6 @@ int main( int argc, char** argv )
     ofstream myfile;
     myfile.open ("results1_1.txt");
 
-    Streaming video_capture;
 
     std::cout << "input MIN_NUM_FEAT = " << std::endl;
     std::cin >> MIN_NUM_FEAT;
@@ -144,11 +160,12 @@ int main( int argc, char** argv )
     sem_init(&semaphore, 0, 0);
     pthread_t display_th;
     pthread_create(&display_th, NULL, display_thread, NULL);
+    pthread_mutex_init(&lock,NULL);
+    video_capture.askFrame();
+    currImage_c = video_capture.getFrame();
 
     for(int numFrame=2; numFrame < MAX_FRAME; numFrame++)	{
         //while(!capture.read(currImage_c));
-        video_capture.askFrame();
-        currImage_c = video_capture.getFrame();
         //capture >> currImage_c;
         cvtColor(currImage_c, currImage, COLOR_BGR2GRAY);
         vector<uchar> status;
@@ -198,13 +215,17 @@ int main( int argc, char** argv )
         position.x = int(t_f.at<double>(0)) + 300;
         position.y = int(t_f.at<double>(2)) + 100;
         printf("Coordinates: x = %02fm y = %02fm z = %02fm\n", t_f.at<double>(0), t_f.at<double>(1), t_f.at<double>(2));
-        sem_post(&semaphore);
+        pthread_mutex_lock(&lock);
+        update_flag = true;
+        pthread_mutex_unlock(&lock);
+        //sem_post(&semaphore);
     }
 
     clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     cout << "Total time taken: " << elapsed_secs << "s" << endl;
     pthread_join(display_th, NULL);
+    pthread_mutex_destroy(&lock);
 
     return 0;
 }
