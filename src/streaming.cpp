@@ -17,8 +17,8 @@ Streaming::Streaming()
     if (init_v4l2() == FALSE )
         throw("init v4l2 failed ");
 
-    init_hdmi();
-
+    //init_hdmi();
+    v4l2_grab();
     this->asked_for_frame = FALSE;
     this->get_frame=FALSE;
 
@@ -27,7 +27,7 @@ Streaming::Streaming()
 Streaming::~Streaming()
 {
 
-};
+}
 
 void Streaming::init_hdmi()
 {
@@ -178,6 +178,8 @@ int Streaming::v4l2_grab(){
 		return FALSE;
 	}
 
+    printf("Start query buffer");
+
 	for (n_buffers = 0; n_buffers < this->req.count; n_buffers++)
 	{
 		this->buf.type      = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -198,6 +200,7 @@ int Streaming::v4l2_grab(){
 		}
 	}
 
+    printf("Start queue buffer");
 	// Queue
 	for (n_buffers = 0; n_buffers < this->req.count; n_buffers++) {
 		this->buf.index = n_buffers;
@@ -207,6 +210,7 @@ int Streaming::v4l2_grab(){
 	}
     /////////////////////////////////////////////////////
 
+    printf("Start streaming");
     // 4. Start capturing////////////////////////////////
     // Start streaming I/O
 	type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -216,6 +220,7 @@ int Streaming::v4l2_grab(){
     }
     /////////////////////////////////////////////////////
 
+    printf("Start dequeue buffer");
     // 5. Read buffer////////////////////////////////////
     // Dequeue
 	if (ioctl(this->fd, VIDIOC_DQBUF, &(this->buf))) {
@@ -250,7 +255,7 @@ cv::Mat Streaming::getFrame(){
     //沒意外的話是0
     yuyv_2_rgb888(this->buf.index);
 
-    return cv::Mat(640,480,CV_8UC1,frame_buffer);
+    return cv::Mat(640,480,CV_8UC3,frame_buffer);
 }
 
 void Streaming::yuyv_2_rgb888( int buffer_index ){
