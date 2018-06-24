@@ -1,2 +1,0 @@
-/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-ar cr ../../lib/libopencv_imgproc_pch_dephelp.a  CMakeFiles/opencv_imgproc_pch_dephelp.dir/opencv_imgproc_pch_dephelp.cxx.o
-/opt/Xilinx/SDK/2013.4/gnu/arm/lin/bin/arm-xilinx-linux-gnueabi-ranlib ../../lib/libopencv_imgproc_pch_dephelp.a
