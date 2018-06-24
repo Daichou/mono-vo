@@ -4,11 +4,12 @@
 #include "streaming.h"
 
 
-using namesace std;
+using namespace std;
 
-void Streaming::Streaming(){
+Streaming::Streaming(){
+    //need to find a way to know error
     if (init_v4l2() == FALSE )
-        return FALSE;
+        throw("init v4l2 failed ");
 
     init_hdmi();
     this->asked_for_frame = FALSE;
@@ -16,7 +17,7 @@ void Streaming::Streaming(){
 
 }
 
-void Stremaing::init_hdmi(){
+void Streaming::init_hdmi(){
     int x = 0, y = 0;
     long int location = 0;
     this->screensize =0;
@@ -158,7 +159,7 @@ int Streaming::v4l2_grab(){
 		perror("Request for buffers error:");
 
 	// Memory allocate
-	this->buffers = malloc(this->req.count * sizeof(*this->buffers));
+	this->buffers = (Streaming::buffer*) malloc(this->req.count * sizeof(*this->buffers));
 	if (!this->buffers) {
 		perror("Memory allocate error:");
 		return FALSE;
@@ -222,22 +223,21 @@ void Streaming::askFrame(){
         perror("Queue buffer error:");
 }
 
-int Streaming::getFrame(){
+cv::Mat Streaming::getFrame(){
     if( this->asked_for_frame == FALSE){
-        return FALSE;
+        throw("need to use Streaming::askFrame() before Streaming::getFrame()");
     }
     this->asked_for_frame = FALSE;
 
     //dequeue frame
     if (ioctl(fd, VIDIOC_DQBUF, &buf)) {
         perror("Dequeue buffer error:");
-        return FALSE;
+        throw("Dequeue buffer error");
     }
     //沒意外的話是0
-    buf_idx = this->buf.index;
-    yuyv_2_rgb888(buf_idx);
+    yuyv_2_rgb888(this->buf.index);
 
-    return Mat(640,480,CV_8UC1,frame_buffer)
+    return cv::Mat(640,480,CV_8UC1,frame_buffer);
 }
 
 void Streaming::yuyv_2_rgb888( int buffer_index ){
@@ -247,9 +247,9 @@ void Streaming::yuyv_2_rgb888( int buffer_index ){
     char *pointer;
 
 	if (buffer_index >=0){
-		pointer = buffers[buffer_index].start;
+		pointer = (char*) buffers[buffer_index].start;
 	}else{
-		pointer = buffers[0].start;
+		pointer = (char*) buffers[0].start;
 	}
     for(i = 0; i < IMAGEHEIGHT; i++)
     {

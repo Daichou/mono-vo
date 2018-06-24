@@ -1,7 +1,6 @@
 #ifndef __FINAL_STREAMING__
 #define __FINAL_STREAMING__
 
-#include "v4l2grab.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -10,10 +9,9 @@
 #include <sys/mman.h>
 #include <sys/ioctl.h>
 #include <linux/videodev2.h>
-#include "opencv2/mat.hpp"
+#include "opencv2/core.hpp"
 
-
-
+#define FILE_VIDEO   "/dev/video0"
 #define TRUE 1
 #define FALSE 0
 
@@ -31,7 +29,7 @@ public:
     void askFrame();
 
     //要改成回傳 opencv2的 mat架構
-    int getFrame();
+    cv::Mat getFrame();
     //init hdmi
     Streaming();
     
@@ -59,8 +57,11 @@ private:
         unsigned int length;
     }*buffers;
 
-    struct fb_var_screeninfo vinfo;
-    struct fb_fix_screeninfo finfo;
+    static struct fb_var_screeninfo vinfo;
+    static struct fb_fix_screeninfo finfo;
+
+    static struct fb_var_screeninfo screen_vinfo;
+    static struct fb_fix_screeninfo screen_finfo;
     struct  v4l2_capability     cap;
     struct  v4l2_fmtdesc        fmtdesc;
     struct  v4l2_format         fmt,fmtack;
@@ -74,6 +75,6 @@ private:
     int hdmi_fd;
     long int screensize;
     char *hdmi_frame_bfr_pt;
-}
+};
 
 #endif
