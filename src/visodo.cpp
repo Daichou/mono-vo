@@ -61,10 +61,11 @@ void* display_thread(void*)
         putText(traj, text, textOrg, fontFace, fontScale, Scalar::all(255), thickness, 8);
 
         hdmi_show(  currImage_c,traj );
-
     }
     pthread_exit(NULL);
 }
+
+
 
 int main( int argc, char** argv )
 {
@@ -79,6 +80,7 @@ int main( int argc, char** argv )
     double scale = 1.00;
 
     VideoCapture capture;
+    capture.set(CV_CAP_PROP_BUFFERSIZE, 1);
     int camera = 0 ;
     if (!capture.open(camera)){
         cout << "Capture from camera #" <<  camera << " didn't work" << endl;
@@ -134,7 +136,8 @@ int main( int argc, char** argv )
     pthread_create(&display_th, NULL, display_thread, NULL);
 
     for(int numFrame=2; numFrame < MAX_FRAME; numFrame++)	{
-        capture >> currImage_c;
+        while(!capture.read(currImage_c));
+        //capture >> currImage_c;
         cvtColor(currImage_c, currImage, COLOR_BGR2GRAY);
         vector<uchar> status;
         featureTracking(prevImage, currImage, prevFeatures, currFeatures, status);
